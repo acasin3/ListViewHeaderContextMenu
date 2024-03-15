@@ -159,3 +159,8 @@ Below are the code blocks of interest to implement context menu to hide or show 
         private System.Windows.Forms.ToolStripMenuItem Two;
         private System.Windows.Forms.ToolStripMenuItem Three;
 ```
+![image](https://github.com/acasin3/ListViewHeaderContextMenu/assets/59311849/73b3e75b-a098-471f-bc95-edde0df04acc)
+
+![image](https://github.com/acasin3/ListViewHeaderContextMenu/assets/59311849/0dbba9a1-28e6-4bd0-9a64-a27ba92fec62)
+
+
