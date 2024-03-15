@@ -1,6 +1,6 @@
 # Adding Context Menu on ListView Column Headers To Show or Hide Columns
 
-While the listview control has a ContextMenuStrip property, it does not have one for the column headers. 
+While the listview control has a ContextMenuStrip property for items, it does not have one for the column headers. 
 
 The intuitive approach to implement this would be to add code to the listview's ColumnClick event. But doing it this way is not possible since the ColumnClickEventArgs does not expose which mouse button was clicked. As we know, the context menu appears when the mouse is right-clicked.
 
