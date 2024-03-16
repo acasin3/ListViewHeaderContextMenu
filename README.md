@@ -54,7 +54,29 @@ Below are the code blocks of interest to implement context menu to hide or show 
             listView1.Items.Add(lvi);
         }
 
-        private void HandleRightClickOnHeader(ColumnHeader header)
+        // Called when the user right-clicks anywhere in the ListView, including the
+        // header bar.
+        private void regularListViewMenu_Opening(object sender, CancelEventArgs e)
+        {
+            // This call indirectly calls EnumWindowCallBack which sets _headerRect
+            // to the area occupied by the ListView's header bar.
+            EnumChildWindows(listView1.Handle, new EnumWinCallBack(EnumWindowCallBack), IntPtr.Zero);
+
+            // If the mouse position is in the header bar, cancel the display
+            // of the regular context menu and display the column header context menu instead.
+            if (_headerRect.Contains(Control.MousePosition))
+            {
+                e.Cancel = true;
+                HandleRightClickOnHeader();
+            }
+            else
+            {
+                // Allow the regular context menu to be displayed.
+                // We may want to update the menu here.
+            }
+        }
+
+        private void HandleRightClickOnHeader()
         {
             // We can do anything here, but most likely we want to 
             // display a context menu for the header.  This code
