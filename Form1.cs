@@ -83,23 +83,7 @@ namespace ListViewHeaderContextMenu
             if (_headerRect.Contains(Control.MousePosition))
             {
                 e.Cancel = true;
-
-                // The xoffset is how far the mouse is from the left edge of the header.
-                int xoffset = Control.MousePosition.X - _headerRect.Left;
-
-                // Iterate through the column headers in the order they are displayed, adding up
-                // their widths as we go.  When the sum exceeds the xoffset, we know the mouse
-                // is on the current header. 
-                int sum = 0;
-                foreach (ColumnHeader header in GetOrderedHeaders(listView1))
-                {
-                    sum += header.Width;
-                    if (sum > xoffset)
-                    {
-                        HandleRightClickOnHeader(header);
-                        break;
-                    }
-                }
+                HandleRightClickOnHeader();
             }
             else
             {
