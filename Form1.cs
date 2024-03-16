@@ -56,8 +56,7 @@ namespace ListViewHeaderContextMenu
             listView1.Items.Add(lvi);
         }
 
-        // This returns an array of ColumnHeaders in the order they are
-        // displayed by the ListView.  
+        // This returns an array of ColumnHeaders in the order they are displayed by the ListView.
         private static ColumnHeader[] GetOrderedHeaders(ListView lv)
         {
             ColumnHeader[] arr = new ColumnHeader[lv.Columns.Count];
@@ -109,8 +108,7 @@ namespace ListViewHeaderContextMenu
             }
         }
 
-        // Called when the specified column header is right-clicked.
-        private void HandleRightClickOnHeader(ColumnHeader header)
+        private void HandleRightClickOnHeader()
         {
             // We can do anything here, but most likely we want to 
             // display a context menu for the header.  This code
