@@ -70,8 +70,7 @@ namespace ListViewHeaderContextMenu
         }    
 
         // Called when the user right-clicks anywhere in the ListView, including the
-        // header bar.  It displays the appropriate context menu for the data row or
-        // header that was right-clicked. 
+        // header bar.
         private void regularListViewMenu_Opening(object sender, CancelEventArgs e)
         {
             // This call indirectly calls EnumWindowCallBack which sets _headerRect
